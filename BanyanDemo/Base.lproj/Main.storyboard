@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,70 @@
             <objects>
                 <viewController storyboardIdentifier="dashboardVC" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="BanyanDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banyan Demo App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-Ts-z3f">
+                                <rect key="frame" x="20" y="89" width="335" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Pdg-ej-N8a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright since 2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-hk-7US">
+                                <rect key="frame" x="20" y="742" width="335" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Tdv-gD-bQi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-vO-Ihf">
+                                <rect key="frame" x="20" y="211" width="335" height="91"/>
+                                <string key="text">Now that your are in like Flin,
+you can decide if and when
+you want to connect to one
+or more institutions</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxq-tU-wzu">
+                                <rect key="frame" x="20" y="452" width="335" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="D8c-MS-Jnz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tap to Connect"/>
+                                <connections>
+                                    <action selector="tapToConnectButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vE-oM-vKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gxq-tU-wzu" secondAttribute="trailing" constant="20" id="0bp-Pv-E1J"/>
+                            <constraint firstItem="XfE-vO-Ihf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0y7-F9-4Em"/>
+                            <constraint firstItem="5kC-Ts-z3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="8Uw-gJ-Xud"/>
+                            <constraint firstItem="HG8-hk-7US" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CDl-1b-DW6"/>
+                            <constraint firstItem="5kC-Ts-z3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GGN-Jr-rvP"/>
+                            <constraint firstItem="HG8-hk-7US" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KKt-yU-01v"/>
+                            <constraint firstItem="XfE-vO-Ihf" firstAttribute="top" secondItem="5kC-Ts-z3f" secondAttribute="bottom" constant="80" id="PFK-3f-bMf"/>
+                            <constraint firstItem="gxq-tU-wzu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h0E-P4-wv7"/>
+                            <constraint firstItem="gxq-tU-wzu" firstAttribute="top" secondItem="XfE-vO-Ihf" secondAttribute="bottom" constant="150" id="pyy-kU-mpi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HG8-hk-7US" secondAttribute="trailing" constant="20" id="sZS-qo-NFR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5kC-Ts-z3f" secondAttribute="trailing" constant="20" id="wuw-NI-3kJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XfE-vO-Ihf" secondAttribute="trailing" constant="20" id="xa4-ZO-Vz0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="76"/>
+            <point key="canvasLocation" x="-562.39999999999998" y="75.369458128078819"/>
         </scene>
     </scenes>
 </document>
