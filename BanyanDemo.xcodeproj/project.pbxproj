@@ -60,8 +60,8 @@
 			children = (
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
-				2BA002B625DBB12F000F4968 /* DashboardViewController.swift */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,
+				2BA002B625DBB12F000F4968 /* DashboardViewController.swift */,
 				2BA002BF25DBCA76000F4968 /* ModuleViewController.swift */,
 				2BA002A825DBAF50000F4968 /* Assets.xcassets */,
 				2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */,
@@ -291,12 +291,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249X253HS3;
 				INFOPLIST_FILE = BanyanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iamshawnfrank.BanyanDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.designwithaa.readers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,12 +311,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249X253HS3;
 				INFOPLIST_FILE = BanyanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iamshawnfrank.BanyanDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.designwithaa.readers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -10,7 +10,7 @@ import UIKit
 class DashboardViewController: UIViewController {
     
     @IBAction func tapToConnectButtonTapped() {
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "loginVC")
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        let moduleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "moduleVC")
+        self.navigationController?.pushViewController(moduleVC, animated: true)
     }
 }

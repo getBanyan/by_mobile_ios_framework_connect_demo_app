@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "dashboardVC")
+        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "loginVC")
         navController.setViewControllers([rootVC], animated: true)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
