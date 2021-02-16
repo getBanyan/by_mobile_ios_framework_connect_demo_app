@@ -8,9 +8,9 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBAction func tapToConnectButtonTapped() {
+        let moduleVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "moduleVC")
+        self.navigationController?.pushViewController(moduleVC, animated: true)
     }
-
 }
