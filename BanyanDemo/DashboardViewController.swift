@@ -8,16 +8,9 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func tapToConnectButtonTapped() {
-        
-        
-        
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "loginVC")
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
-    
-
 }
