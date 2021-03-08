@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework
+${BUILT_PRODUCTS_DIR}/AWSLambda/AWSLambda.framework
+${BUILT_PRODUCTS_DIR}/VGSCollectSDK/VGSCollectSDK.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/CardScan/CardScan.framework/CardScan

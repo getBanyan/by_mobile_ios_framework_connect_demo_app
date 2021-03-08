@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OxR-CD-gvQ">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="42" id="Pdg-ej-N8a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright since 2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-hk-7US">
@@ -40,11 +41,11 @@ you can decide if and when
 you want to connect to one
 or more institutions</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxq-tU-wzu">
-                                <rect key="frame" x="20" y="452" width="335" height="42"/>
+                                <rect key="frame" x="20" y="670" width="335" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="D8c-MS-Jnz"/>
                                 </constraints>
@@ -54,6 +55,27 @@ or more institutions</string>
                                     <action selector="tapToConnectButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vE-oM-vKe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your preferred background color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKF-OK-fEj">
+                                <rect key="frame" x="20" y="543" width="335" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9B0-Cy-Q7f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bTe-ZO-qXA">
+                                <rect key="frame" x="20" y="580" width="335" height="31"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4DJ-hu-HRy"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="White"/>
+                                    <segment title="Blue"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,19 +85,28 @@ or more institutions</string>
                             <constraint firstItem="5kC-Ts-z3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="8Uw-gJ-Xud"/>
                             <constraint firstItem="HG8-hk-7US" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CDl-1b-DW6"/>
                             <constraint firstItem="5kC-Ts-z3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GGN-Jr-rvP"/>
+                            <constraint firstItem="bTe-ZO-qXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H6J-M1-9h3"/>
                             <constraint firstItem="HG8-hk-7US" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KKt-yU-01v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKF-OK-fEj" secondAttribute="trailing" constant="20" id="Kfr-t1-USH"/>
+                            <constraint firstItem="bTe-ZO-qXA" firstAttribute="top" secondItem="IKF-OK-fEj" secondAttribute="bottom" constant="12" id="Okm-AD-arB"/>
+                            <constraint firstItem="HG8-hk-7US" firstAttribute="top" secondItem="gxq-tU-wzu" secondAttribute="bottom" constant="30" id="OqN-GE-rpf"/>
                             <constraint firstItem="XfE-vO-Ihf" firstAttribute="top" secondItem="5kC-Ts-z3f" secondAttribute="bottom" constant="80" id="PFK-3f-bMf"/>
+                            <constraint firstItem="IKF-OK-fEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UQb-02-nqx"/>
                             <constraint firstItem="gxq-tU-wzu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h0E-P4-wv7"/>
-                            <constraint firstItem="gxq-tU-wzu" firstAttribute="top" secondItem="XfE-vO-Ihf" secondAttribute="bottom" constant="150" id="pyy-kU-mpi"/>
+                            <constraint firstAttribute="trailing" secondItem="bTe-ZO-qXA" secondAttribute="trailing" constant="20" id="h2J-Yv-bE5"/>
+                            <constraint firstItem="gxq-tU-wzu" firstAttribute="top" secondItem="bTe-ZO-qXA" secondAttribute="bottom" constant="60" id="nRb-63-iLo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HG8-hk-7US" secondAttribute="trailing" constant="20" id="sZS-qo-NFR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5kC-Ts-z3f" secondAttribute="trailing" constant="20" id="wuw-NI-3kJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XfE-vO-Ihf" secondAttribute="trailing" constant="20" id="xa4-ZO-Vz0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgColorSegment" destination="bTe-ZO-qXA" id="ffe-KD-cqc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="75"/>
+            <point key="canvasLocation" x="69.599999999999994" y="74.630541871921181"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5sf-Ga-IhJ">
@@ -91,7 +122,7 @@ or more institutions</string>
                                     <constraint firstAttribute="height" constant="42" id="eRf-nj-gfj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright since 2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-Q8-3kG">
@@ -109,10 +140,10 @@ or more institutions</string>
                                     <constraint firstAttribute="height" constant="26" id="lIf-Qv-iUI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQq-mD-ANb">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQq-mD-ANb">
                                 <rect key="frame" x="16" y="257" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ntj-sd-PZY"/>
@@ -126,10 +157,10 @@ or more institutions</string>
                                     <constraint firstAttribute="height" constant="26" id="wEh-bQ-hVH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8y-hI-eke">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8y-hI-eke">
                                 <rect key="frame" x="16" y="358" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="84W-XI-x8n"/>
@@ -155,6 +186,7 @@ or more institutions</string>
                                     <constraint firstAttribute="height" constant="20" id="FIL-T5-vcX"/>
                                     <constraint firstAttribute="width" constant="20" id="a0i-B9-Lt3"/>
                                 </constraints>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mLd-fx-O40"/>

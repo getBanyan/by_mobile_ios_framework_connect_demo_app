@@ -1,0 +1,11 @@
+framework module BanyanService {
+  umbrella header "BanyanService.h"
+
+  export *
+  module * { export * }
+}
+
+module BanyanService.Swift {
+    header "BanyanService-Swift.h"
+    requires objc
+}
