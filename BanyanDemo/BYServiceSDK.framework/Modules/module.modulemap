@@ -1,0 +1,11 @@
+framework module BYServiceSDK {
+  umbrella header "BYServiceSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BYServiceSDK.Swift {
+    header "BYServiceSDK-Swift.h"
+    requires objc
+}

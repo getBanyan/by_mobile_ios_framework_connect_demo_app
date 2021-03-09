@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0FDBCA25F66D3800D3C7F9 /* BanyanService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0FDBC825F66D3500D3C7F9 /* BanyanService.framework */; };
-		2B0FDBCB25F66D3800D3C7F9 /* BanyanService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0FDBC825F66D3500D3C7F9 /* BanyanService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B6A2EBC25F80230002A79A0 /* BYServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6A2EBA25F8022C002A79A0 /* BYServiceSDK.framework */; };
+		2B6A2EBD25F80230002A79A0 /* BYServiceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6A2EBA25F8022C002A79A0 /* BYServiceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B6A2EBF25F8027A002A79A0 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */; };
+		2B6A2EC125F80282002A79A0 /* Antaro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A2EC025F80282002A79A0 /* Antaro.ttf */; };
 		2BA002A025DBAF44000F4968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0029F25DBAF44000F4968 /* AppDelegate.swift */; };
 		2BA002A725DBAF44000F4968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002A525DBAF44000F4968 /* Main.storyboard */; };
 		2BA002A925DBAF50000F4968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002A825DBAF50000F4968 /* Assets.xcassets */; };
@@ -26,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B0FDBCB25F66D3800D3C7F9 /* BanyanService.framework in Embed Frameworks */,
+				2B6A2EBD25F80230002A79A0 /* BYServiceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B0FDBC825F66D3500D3C7F9 /* BanyanService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BanyanService.framework; sourceTree = SOURCE_ROOT; };
+		2B6A2EBA25F8022C002A79A0 /* BYServiceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYServiceSDK.framework; sourceTree = SOURCE_ROOT; };
+		2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Regular.ttf"; path = "../../../../../Downloads/Ubuntu/Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		2B6A2EC025F80282002A79A0 /* Antaro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Antaro.ttf; path = ../../../../../Downloads/antaro/Antaro.ttf; sourceTree = "<group>"; };
 		2BA0029C25DBAF44000F4968 /* BanyanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanyanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA0029F25DBAF44000F4968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA002A625DBAF44000F4968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6A2EBC25F80230002A79A0 /* BYServiceSDK.framework in Frameworks */,
 				B5D96151F2F3FF28323DB9EC /* Pods_BanyanDemo.framework in Frameworks */,
-				2B0FDBCA25F66D3800D3C7F9 /* BanyanService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +87,9 @@
 		2BA0029E25DBAF44000F4968 /* BanyanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2B0FDBC825F66D3500D3C7F9 /* BanyanService.framework */,
+				2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */,
+				2B6A2EC025F80282002A79A0 /* Antaro.ttf */,
+				2B6A2EBA25F8022C002A79A0 /* BYServiceSDK.framework */,
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,
@@ -173,9 +179,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6A2EBF25F8027A002A79A0 /* Ubuntu-Regular.ttf in Resources */,
 				2BA002AC25DBAF50000F4968 /* LaunchScreen.storyboard in Resources */,
 				2BA002A925DBAF50000F4968 /* Assets.xcassets in Resources */,
 				2BA002A725DBAF44000F4968 /* Main.storyboard in Resources */,
+				2B6A2EC125F80282002A79A0 /* Antaro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -411,7 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -424,7 +432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

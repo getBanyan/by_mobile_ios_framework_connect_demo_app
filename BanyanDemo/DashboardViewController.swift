@@ -6,32 +6,68 @@
 //
 
 import UIKit
-import BanyanService
+import BYServiceSDK
 
 class DashboardViewController: UIViewController {
   
-  @IBOutlet weak var bgColorSegment: UISegmentedControl!
+  var byController: BYController?
+  @IBOutlet weak var customizationView: UIView!
+  @IBOutlet weak var viewBgColorSegment: UISegmentedControl!
+  @IBOutlet weak var buttonColorSegment: UISegmentedControl!
+  @IBOutlet weak var textColorSegment: UISegmentedControl!
+  @IBOutlet weak var fontNameSegment: UISegmentedControl!
+  @IBOutlet weak var textBoxColorSegment: UISegmentedControl!
+  @IBOutlet weak var customAnimationSwitch: UISwitch!
+  
+  let lightGreen = UIColor(red: 4.0/255.0, green: 114.0/255.0, blue: 77.0/255.0, alpha: 1.0)
+  let lightPink = UIColor(red: 245.0/255.0, green: 237.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+  let lightBlue = UIColor(red: 202.0/255.0, green: 216.0/255.0, blue: 222.0/255.0, alpha: 1.0)
+  
+  let bgColors = [UIColor.white, UIColor.black, UIColor.gray]
+  let buttonColors = [UIColor.blue, UIColor.green, UIColor.purple]
+  let textColors = [UIColor.orange, UIColor.red, UIColor.yellow]
+  var textInputColors: [UIColor]!
+  let fontName = ["Ubuntu-Regular", "Antaro"]
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    byController = nil
+    textInputColors = [lightGreen, lightPink, lightBlue]
+    customizationView.isHidden = customAnimationSwitch.isOn
+    customizeSegment()
+  }
+  
+  func customizeSegment() {
+    for view in customizationView.subviews {
+      if let segmentView = view as? UISegmentedControl {
+        segmentView.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        segmentView.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+      }
+    }
+  }
   
   @IBAction func tapToConnectButtonTapped() {
+    var userId = randomString(ofLength: 20)
     
-    if let userId = UserDefaults.standard.string(forKey: "userId") {
-      BYManager.shared.initialize(withId: userId)
-    }
-    else {
-      let randomId = randomString(ofLength: 20)
-      BYManager.shared.initialize(withId: randomId)
-      UserDefaults.standard.setValue(randomId, forKey: "userId")
+    if let exitingUserId = UserDefaults.standard.string(forKey: "userId") {
+      userId = exitingUserId
     }
     
-    BYManager.shared.shouldShowLogs = true
-    BYManager.shared.allowsCustomUI = true
-    
-    if bgColorSegment.selectedSegmentIndex == 1{
-      BYManager.shared.setLayoutColor(.blue, forKey: .viewBackgroundColor)
-    }
-    
-    present(BYManager.shared.byNavigationController, animated: true, completion: nil)
+    byController = BYController(withClientId: userId)
+    byController?.shouldShowLogs = true
+    byController?.allowsCustomUI = !customAnimationSwitch.isOn
+    byController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
+    byController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
+    byController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
+    byController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
+    byController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputTextColor)
+    byController?.present(on: self, animated: true, completion: nil)
   }
+  
+  @IBAction func switchChanged(_ sender: UISwitch, forEvent event: UIEvent) {
+    customizationView.isHidden = sender.isOn
+  }
+  
   
   func randomString(ofLength length: Int) -> String {
     

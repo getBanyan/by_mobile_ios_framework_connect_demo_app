@@ -8,5 +8,6 @@ target 'BanyanDemo' do
   pod 'VGSCollectSDK', '1.7.5'
   pod 'VGSCollectSDK/CardScan', '1.7.5'
   pod 'AWSLambda', '2.23.0'
+  pod 'NewFrameworkTest'
 
 end

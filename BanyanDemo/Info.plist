@@ -22,6 +22,12 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>We need to use the camera to scan your credit number info</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Antaro.ttf</string>
+		<string>Ubuntu-Regular.ttf</string>
+		<string>Spartan-VariableFont_wght.ttf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
