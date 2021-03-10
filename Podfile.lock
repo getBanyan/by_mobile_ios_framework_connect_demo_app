@@ -1,11 +1,12 @@
 PODS:
-  - AWSCore (2.23.0)
-  - AWSLambda (2.23.0):
-    - AWSCore (= 2.23.0)
+  - AWSCore (2.23.1)
+  - AWSLambda (2.23.1):
+    - AWSCore (= 2.23.1)
+  - BYServiceSDK (0.1.0):
+    - AWSLambda (~> 2.23.0)
+    - VGSCollectSDK (~> 1.7.5)
+    - VGSCollectSDK/CardScan (~> 1.7.5)
   - CardScan (2.0.7)
-  - NewFrameworkTest (1.0.1):
-    - VGSCollectSDK (~> 1.7.0)
-    - VGSCollectSDK/CardScan (~> 1.7.0)
   - VGSCollectSDK (1.7.5):
     - VGSCollectSDK/Core (= 1.7.5)
   - VGSCollectSDK/CardScan (1.7.5):
@@ -14,26 +15,23 @@ PODS:
   - VGSCollectSDK/Core (1.7.5)
 
 DEPENDENCIES:
-  - AWSLambda (= 2.23.0)
-  - NewFrameworkTest
-  - VGSCollectSDK (= 1.7.5)
-  - VGSCollectSDK/CardScan (= 1.7.5)
+  - BYServiceSDK
 
 SPEC REPOS:
   trunk:
     - AWSCore
     - AWSLambda
+    - BYServiceSDK
     - CardScan
-    - NewFrameworkTest
     - VGSCollectSDK
 
 SPEC CHECKSUMS:
-  AWSCore: 589ad0bd5b72e9a95ce33834f12339b50cfc9f14
-  AWSLambda: 52834cc7405578209b24ed848928b254b5b46b33
+  AWSCore: 48bf561f5fb3616ef42c1f7f3eeb4b502d11f69d
+  AWSLambda: 42989ceac361af1ac5100493f9d16defc4860c66
+  BYServiceSDK: 6f542d1e0f3d01b9d52f4fa4819d08c31c5ebad4
   CardScan: 0bc2843073a9c2ef954fbb59a671d306efd76c4c
-  NewFrameworkTest: dbeca8b71d8f019a7db3e77813503d63f00d5ec4
   VGSCollectSDK: 4c76e4e0729060101cf40ab27bde8bd3db7d36c9
 
-PODFILE CHECKSUM: 59201d6df121f842e4fcb1aaa5c27efc058326fa
+PODFILE CHECKSUM: 5b74c2df15e57f89d1344723c7a192938f1e800c
 
 COCOAPODS: 1.10.1
