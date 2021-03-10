@@ -52,6 +52,9 @@ class DashboardViewController: UIViewController {
     if let exitingUserId = UserDefaults.standard.string(forKey: "userId") {
       userId = exitingUserId
     }
+    else {
+      UserDefaults.standard.setValue(userId, forKey: "userId")
+    }
     
     byController = BYController(withClientId: userId)
     byController?.shouldShowLogs = true
@@ -60,7 +63,7 @@ class DashboardViewController: UIViewController {
     byController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
     byController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
     byController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
-    byController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputTextColor)
+    byController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputBackgroundColor)
     byController?.present(on: self, animated: true, completion: nil)
   }
   

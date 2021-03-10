@@ -18,27 +18,27 @@
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		5ZUGnmvCpdR+lSe6Ohbem5Gf+ss=
+		NyFMm6EiRS55P65jfXyK/MtdDus=
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		5ZUGnmvCpdR+lSe6Ohbem5Gf+ss=
+		NyFMm6EiRS55P65jfXyK/MtdDus=
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		3T8NgHo6M8jGE3OJ2Di38WaouZs=
+		ECQackyLUb5KqNwFZWiKAKDfjOY=
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		15/5sFVaLTCeHfinYYgEZRuRSkQ=
+		fCSqP/2cRt5ehRHBKuvuYi/pcak=
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		3T8NgHo6M8jGE3OJ2Di38WaouZs=
+		ECQackyLUb5KqNwFZWiKAKDfjOY=
 		</data>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		15/5sFVaLTCeHfinYYgEZRuRSkQ=
+		fCSqP/2cRt5ehRHBKuvuYi/pcak=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+tGri39cpFTsK1/jEywmtT6AjmCEsTBDWL4GJaAtlzQ=
+			NP83bE4kw2zXsn16NBOzJ81ZfJNM2Rc9MNHSXKfmYSc=
 			</data>
 		</dict>
 		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+tGri39cpFTsK1/jEywmtT6AjmCEsTBDWL4GJaAtlzQ=
+			NP83bE4kw2zXsn16NBOzJ81ZfJNM2Rc9MNHSXKfmYSc=
 			</data>
 		</dict>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JiFfwdtazq8EvFhVCW0+cjT0KDIBA0hTPvZkRzDa66I=
+			VCe9KyuJFZhWF9R0XHqK5krCyO7P5WfrEBEaRUQBN0U=
 			</data>
 		</dict>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xRkF5VuwFBZaE4uguwhMU+TkW23P/blRRsqVeVmluzI=
+			KICxKTQ5rVOVfk3jfNcUUfwcpdHFDaR6tapbMtnnP9w=
 			</data>
 		</dict>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JiFfwdtazq8EvFhVCW0+cjT0KDIBA0hTPvZkRzDa66I=
+			VCe9KyuJFZhWF9R0XHqK5krCyO7P5WfrEBEaRUQBN0U=
 			</data>
 		</dict>
 		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xRkF5VuwFBZaE4uguwhMU+TkW23P/blRRsqVeVmluzI=
+			KICxKTQ5rVOVfk3jfNcUUfwcpdHFDaR6tapbMtnnP9w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

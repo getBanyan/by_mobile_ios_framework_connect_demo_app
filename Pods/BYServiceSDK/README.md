@@ -1,1 +1,0 @@
-# Banyan Service SDK Guide
