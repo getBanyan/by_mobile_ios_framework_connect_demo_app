@@ -11,6 +11,10 @@ import BYServiceSDK
 class DashboardViewController: UIViewController {
   
   var byController: BYController?
+  
+  @IBOutlet weak var userIdLabel: UILabel!
+  @IBOutlet weak var userIdTextField: UITextField!
+  
   @IBOutlet weak var customizationView: UIView!
   @IBOutlet weak var viewBgColorSegment: UISegmentedControl!
   @IBOutlet weak var buttonColorSegment: UISegmentedControl!
@@ -18,6 +22,8 @@ class DashboardViewController: UIViewController {
   @IBOutlet weak var fontNameSegment: UISegmentedControl!
   @IBOutlet weak var textBoxColorSegment: UISegmentedControl!
   @IBOutlet weak var customAnimationSwitch: UISwitch!
+  
+  var randomId = ""
   
   let lightGreen = UIColor(red: 4.0/255.0, green: 114.0/255.0, blue: 77.0/255.0, alpha: 1.0)
   let lightPink = UIColor(red: 245.0/255.0, green: 237.0/255.0, blue: 240.0/255.0, alpha: 1.0)
@@ -35,6 +41,7 @@ class DashboardViewController: UIViewController {
     textInputColors = [lightGreen, lightPink, lightBlue]
     customizationView.isHidden = customAnimationSwitch.isOn
     customizeSegment()
+    setUpTextField()
   }
   
   func customizeSegment() {
@@ -46,15 +53,27 @@ class DashboardViewController: UIViewController {
     }
   }
   
-  @IBAction func tapToConnectButtonTapped() {
-    var userId = randomString(ofLength: 20)
+  func setUpTextField() {
+    userIdTextField.layer.borderWidth = 1.0
+    userIdTextField.layer.borderColor = UIColor.black.cgColor
+    userIdTextField.doneAccessory = true
     
     if let exitingUserId = UserDefaults.standard.string(forKey: "userId") {
-      userId = exitingUserId
+      randomId = exitingUserId
     }
     else {
-      UserDefaults.standard.setValue(userId, forKey: "userId")
+      randomId = randomString(ofLength: 10)
     }
+    
+    UserDefaults.standard.setValue(randomId, forKey: "userId")
+    if let text = userIdLabel.text {
+      userIdLabel.text = text + randomId
+    }
+    
+  }
+  
+  @IBAction func tapToConnectButtonTapped() {
+    let userId = getUserId()
     
     byController = BYController(withClientId: userId)
     byController?.shouldShowLogs = true
@@ -71,9 +90,19 @@ class DashboardViewController: UIViewController {
     customizationView.isHidden = sender.isOn
   }
   
+  func getUserId() -> String {
+    if let userId = userIdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+       userId.count > 0 {
+      return userId
+    }
+    else if let existingUserId = UserDefaults.standard.string(forKey: "userId") {
+      return existingUserId
+    }
+    
+    return "Shawn-Frank"
+  }
   
   func randomString(ofLength length: Int) -> String {
-    
     enum randomGenerator {
       static let allowedCharacters = Array("abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789")
       static let k = UInt32(allowedCharacters.count)
