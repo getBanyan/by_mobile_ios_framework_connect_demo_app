@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     activityIndicator.isHidden = false
     
     // simple DispatchQueue used to simulate waiting for a network request's response
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
       self.performLogin()
     }
   }

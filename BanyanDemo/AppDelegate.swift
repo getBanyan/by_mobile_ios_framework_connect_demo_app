@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let navController = UINavigationController()
-        navController.isNavigationBarHidden = true
         
         let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "loginVC")
         navController.setViewControllers([rootVC], animated: true)

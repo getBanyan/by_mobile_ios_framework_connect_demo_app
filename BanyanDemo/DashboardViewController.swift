@@ -8,9 +8,12 @@
 import UIKit
 import BYServiceSDK
 
-class DashboardViewController: UIViewController {
+
+
+class DashboardViewController: UIViewController, SettingsDelegate {
   
   var byController: BYController?
+  var currentEnvironment: BYEnvironment = .Development
   
   @IBOutlet weak var userIdLabel: UILabel!
   @IBOutlet weak var userIdTextField: UITextField!
@@ -42,6 +45,7 @@ class DashboardViewController: UIViewController {
     customizationView.isHidden = customAnimationSwitch.isOn
     customizeSegment()
     setUpTextField()
+    setUpNavBar()
   }
   
   func customizeSegment() {
@@ -69,13 +73,30 @@ class DashboardViewController: UIViewController {
     if let text = userIdLabel.text {
       userIdLabel.text = text + randomId
     }
-    
+  }
+  
+  func setUpNavBar() {
+    navigationItem.hidesBackButton = true
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+  }
+  
+  @objc
+  private func settingsButtonTapped() {
+    if let svc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "settingsVC") as? SettingsViewController {
+      svc.currentEnvironment = currentEnvironment
+      svc.settingsDelegate = self
+      present(svc, animated: true, completion: nil)
+    }
+  }
+  
+  func changeEnvironment(_ environment: BYEnvironment) {
+    currentEnvironment = environment
   }
   
   @IBAction func tapToConnectButtonTapped() {
     let userId = getUserId()
     
-    byController = BYController(withClientId: userId)
+    byController = BYController(withClientId: userId, andEnvironment: .Laboratory)
     byController?.shouldShowLogs = true
     byController?.allowsCustomUI = !customAnimationSwitch.isOn
     byController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)

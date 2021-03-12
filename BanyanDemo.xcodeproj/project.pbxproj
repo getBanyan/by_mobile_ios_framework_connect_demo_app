@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		198B69D13761CF9761D56137 /* Pods_BanyanDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF61F5ED0B2B2D3BAA77214F /* Pods_BanyanDemo.framework */; };
 		2B02FD8125FA4F6B00B78B01 /* UITextField+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */; };
-		2B02FD8425FA57AC00B78B01 /* BYServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B02FD8225FA57A800B78B01 /* BYServiceSDK.framework */; };
-		2B02FD8525FA57AC00B78B01 /* BYServiceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B02FD8225FA57A800B78B01 /* BYServiceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B66659125FBC86B00BE9140 /* BYServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B66658F25FBC86800BE9140 /* BYServiceSDK.framework */; };
+		2B66659225FBC86B00BE9140 /* BYServiceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B66658F25FBC86800BE9140 /* BYServiceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B6910D225FBB78700218D7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6910D125FBB78700218D7D /* SettingsViewController.swift */; };
 		2B6A2EBF25F8027A002A79A0 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */; };
 		2B6A2EC125F80282002A79A0 /* Antaro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A2EC025F80282002A79A0 /* Antaro.ttf */; };
 		2BA002A025DBAF44000F4968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0029F25DBAF44000F4968 /* AppDelegate.swift */; };
@@ -28,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B02FD8525FA57AC00B78B01 /* BYServiceSDK.framework in Embed Frameworks */,
+				2B66659225FBC86B00BE9140 /* BYServiceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,7 +38,8 @@
 
 /* Begin PBXFileReference section */
 		2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneButton.swift"; sourceTree = "<group>"; };
-		2B02FD8225FA57A800B78B01 /* BYServiceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYServiceSDK.framework; sourceTree = SOURCE_ROOT; };
+		2B66658F25FBC86800BE9140 /* BYServiceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYServiceSDK.framework; sourceTree = SOURCE_ROOT; };
+		2B6910D125FBB78700218D7D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Regular.ttf"; path = "../../../../../Downloads/Ubuntu/Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		2B6A2EC025F80282002A79A0 /* Antaro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Antaro.ttf; path = ../../../../../Downloads/antaro/Antaro.ttf; sourceTree = "<group>"; };
 		2BA0029C25DBAF44000F4968 /* BanyanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanyanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B02FD8425FA57AC00B78B01 /* BYServiceSDK.framework in Frameworks */,
+				2B66659125FBC86B00BE9140 /* BYServiceSDK.framework in Frameworks */,
 				198B69D13761CF9761D56137 /* Pods_BanyanDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,13 +89,14 @@
 		2BA0029E25DBAF44000F4968 /* BanyanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2B02FD8225FA57A800B78B01 /* BYServiceSDK.framework */,
+				2B66658F25FBC86800BE9140 /* BYServiceSDK.framework */,
 				2B6A2EBE25F8027A002A79A0 /* Ubuntu-Regular.ttf */,
 				2B6A2EC025F80282002A79A0 /* Antaro.ttf */,
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,
 				2BA002B625DBB12F000F4968 /* DashboardViewController.swift */,
+				2B6910D125FBB78700218D7D /* SettingsViewController.swift */,
 				2BA002A825DBAF50000F4968 /* Assets.xcassets */,
 				2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */,
 				2BA002AD25DBAF50000F4968 /* Info.plist */,
@@ -239,6 +242,7 @@
 				2BA002BC25DBC6C5000F4968 /* LoginViewController.swift in Sources */,
 				2BA002A025DBAF44000F4968 /* AppDelegate.swift in Sources */,
 				2BA002B725DBB12F000F4968 /* DashboardViewController.swift in Sources */,
+				2B6910D225FBB78700218D7D /* SettingsViewController.swift in Sources */,
 				2B02FD8125FA4F6B00B78B01 /* UITextField+DoneButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -402,7 +406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -419,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -432,7 +436,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
