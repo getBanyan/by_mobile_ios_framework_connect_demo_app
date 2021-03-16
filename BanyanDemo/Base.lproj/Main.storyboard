@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-NQ-zss">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="174" width="375" height="638"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" rowHeight="275" id="0c0-Do-EaT" customClass="TransactionTableViewCell" customModule="BanyanDemo" customModuleProvider="target">
@@ -159,17 +159,48 @@
                                     <outlet property="delegate" destination="Hun-bB-Og3" id="zxY-vc-JHR"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-PM-EEt">
+                                <rect key="frame" x="16" y="114" width="343" height="41"/>
+                                <color key="backgroundColor" red="0.88224452730000003" green="0.88233524559999998" blue="0.88632929329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="73L-7B-i1y"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Development"/>
+                                    <segment title="Laboratory"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentChangedAction:" destination="Hun-bB-Og3" eventType="valueChanged" id="zyg-ZA-Ok4"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set environment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re2-aO-N4Y">
+                                <rect key="frame" x="16" y="74" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="auE-pg-kd6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="av9-fj-XzY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GgH-PM-EEt" firstAttribute="leading" secondItem="2Fz-cV-DRU" secondAttribute="leading" constant="16" id="37L-57-50z"/>
+                            <constraint firstItem="UXa-NQ-zss" firstAttribute="top" secondItem="GgH-PM-EEt" secondAttribute="bottom" constant="20" id="9DL-j9-4S7"/>
+                            <constraint firstAttribute="trailing" secondItem="GgH-PM-EEt" secondAttribute="trailing" constant="16" id="DEB-07-tZt"/>
+                            <constraint firstAttribute="trailing" secondItem="re2-aO-N4Y" secondAttribute="trailing" constant="16" id="Nsg-oN-KkM"/>
+                            <constraint firstItem="re2-aO-N4Y" firstAttribute="top" secondItem="av9-fj-XzY" secondAttribute="top" constant="30" id="RKh-Wj-7L6"/>
                             <constraint firstAttribute="bottom" secondItem="UXa-NQ-zss" secondAttribute="bottom" id="YOx-Ua-AOl"/>
+                            <constraint firstItem="re2-aO-N4Y" firstAttribute="leading" secondItem="2Fz-cV-DRU" secondAttribute="leading" constant="16" id="ZEj-Wq-acE"/>
                             <constraint firstAttribute="trailing" secondItem="UXa-NQ-zss" secondAttribute="trailing" id="f6D-yO-HP0"/>
-                            <constraint firstItem="UXa-NQ-zss" firstAttribute="top" secondItem="av9-fj-XzY" secondAttribute="top" id="iqA-6l-62G"/>
+                            <constraint firstItem="GgH-PM-EEt" firstAttribute="top" secondItem="re2-aO-N4Y" secondAttribute="bottom" constant="15" id="fiq-GG-9LX"/>
                             <constraint firstItem="UXa-NQ-zss" firstAttribute="leading" secondItem="2Fz-cV-DRU" secondAttribute="leading" id="l4q-CB-NtB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="environmentSegment" destination="GgH-PM-EEt" id="wZT-9e-3YF"/>
                         <outlet property="transactionTableView" destination="UXa-NQ-zss" id="JDU-1q-8o0"/>
                     </connections>
                 </viewController>
