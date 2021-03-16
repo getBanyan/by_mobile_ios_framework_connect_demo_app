@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
     if UIDevice.current.name == kCEOName {
       // change the endpoint to production
     }
-    let dashboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "dashboardVC")
+    let dashboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "menuVC")
     self.activityIndicator.stopAnimating()
     self.navigationController?.pushViewController(dashboardVC, animated: true)
   }

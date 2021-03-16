@@ -20,6 +20,9 @@
 		2BA002AC25DBAF50000F4968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */; };
 		2BA002B725DBB12F000F4968 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002B625DBB12F000F4968 /* DashboardViewController.swift */; };
 		2BA002BC25DBC6C5000F4968 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */; };
+		2BD17AC92600AD88000FDC00 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17AC82600AD88000FDC00 /* MenuViewController.swift */; };
+		2BD17ACB2600ADA4000FDC00 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */; };
+		2BD17ACD2600B201000FDC00 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +53,9 @@
 		2BA002AD25DBAF50000F4968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA002B625DBB12F000F4968 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2BD17AC82600AD88000FDC00 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		2FF09606877F2B0CA69EA302 /* Pods-BanyanDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.debug.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		62E2E3A17D5CAB4481AC3446 /* Pods-BanyanDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.release.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DF61F5ED0B2B2D3BAA77214F /* Pods_BanyanDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanyanDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,12 +101,15 @@
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,
+				2BD17AC82600AD88000FDC00 /* MenuViewController.swift */,
 				2BA002B625DBB12F000F4968 /* DashboardViewController.swift */,
 				2B6910D125FBB78700218D7D /* SettingsViewController.swift */,
 				2BA002A825DBAF50000F4968 /* Assets.xcassets */,
 				2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */,
 				2BA002AD25DBAF50000F4968 /* Info.plist */,
 				2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */,
+				2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */,
+				2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */,
 			);
 			path = BanyanDemo;
 			sourceTree = "<group>";
@@ -240,6 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA002BC25DBC6C5000F4968 /* LoginViewController.swift in Sources */,
+				2BD17ACB2600ADA4000FDC00 /* TransactionViewController.swift in Sources */,
+				2BD17ACD2600B201000FDC00 /* TransactionTableViewCell.swift in Sources */,
+				2BD17AC92600AD88000FDC00 /* MenuViewController.swift in Sources */,
 				2BA002A025DBAF44000F4968 /* AppDelegate.swift in Sources */,
 				2BA002B725DBB12F000F4968 /* DashboardViewController.swift in Sources */,
 				2B6910D225FBB78700218D7D /* SettingsViewController.swift in Sources */,
