@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AWSCore
 
 enum AWSEnvironment {
   case development
@@ -50,6 +51,7 @@ class TransactionViewController: UIViewController, UITableViewDataSource, UITabl
   }
   
   private func getTransactionData() {
+    AWSTransactionManager.getTransactionData()
     didPullToRefresh()
   }
   

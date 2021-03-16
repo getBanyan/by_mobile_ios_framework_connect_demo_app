@@ -176,12 +176,14 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AWSLambda/AWSLambda.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VGSCollectSDK/VGSCollectSDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/CardScan/CardScan.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AWSLambda/AWSLambda.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/VGSCollectSDK/VGSCollectSDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/CardScan/CardScan.framework"
