@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-NQ-zss">
-                                <rect key="frame" x="0.0" y="174" width="375" height="638"/>
+                                <rect key="frame" x="0.0" y="54" width="375" height="758"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" rowHeight="275" id="0c0-Do-EaT" customClass="TransactionTableViewCell" customModule="BanyanDemo" customModuleProvider="target">
@@ -174,13 +174,13 @@
                                     <action selector="segmentChangedAction:" destination="Hun-bB-Og3" eventType="valueChanged" id="zyg-ZA-Ok4"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set environment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re2-aO-N4Y">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set environment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re2-aO-N4Y">
                                 <rect key="frame" x="16" y="74" width="343" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="auE-pg-kd6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -188,10 +188,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GgH-PM-EEt" firstAttribute="leading" secondItem="2Fz-cV-DRU" secondAttribute="leading" constant="16" id="37L-57-50z"/>
-                            <constraint firstItem="UXa-NQ-zss" firstAttribute="top" secondItem="GgH-PM-EEt" secondAttribute="bottom" constant="20" id="9DL-j9-4S7"/>
                             <constraint firstAttribute="trailing" secondItem="GgH-PM-EEt" secondAttribute="trailing" constant="16" id="DEB-07-tZt"/>
                             <constraint firstAttribute="trailing" secondItem="re2-aO-N4Y" secondAttribute="trailing" constant="16" id="Nsg-oN-KkM"/>
                             <constraint firstItem="re2-aO-N4Y" firstAttribute="top" secondItem="av9-fj-XzY" secondAttribute="top" constant="30" id="RKh-Wj-7L6"/>
+                            <constraint firstItem="UXa-NQ-zss" firstAttribute="top" secondItem="av9-fj-XzY" secondAttribute="top" constant="10" id="UFM-j1-ZpI"/>
                             <constraint firstAttribute="bottom" secondItem="UXa-NQ-zss" secondAttribute="bottom" id="YOx-Ua-AOl"/>
                             <constraint firstItem="re2-aO-N4Y" firstAttribute="leading" secondItem="2Fz-cV-DRU" secondAttribute="leading" constant="16" id="ZEj-Wq-acE"/>
                             <constraint firstAttribute="trailing" secondItem="UXa-NQ-zss" secondAttribute="trailing" id="f6D-yO-HP0"/>

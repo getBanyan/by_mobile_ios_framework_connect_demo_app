@@ -8,32 +8,51 @@
 import UIKit
 import AWSCore
 
-enum AWSEnvironment {
-  case development
-  case laboratory
-}
+/*
+ 
+ { [weak self] (awsTransaction, error) in
+   guard let awsTransaction = awsTransaction else {
+     if let error = error {
+       print("ERROR IN CONNECTING WITH DB: \(error.userInfo)")
+       
+       DispatchQueue.main.async {
+         self?.handleError()
+       }
+     }
+     return
+   }
+   
+   DispatchQueue.main.async {
+     self?.transactions = awsTransaction
+     self?.transactionTableView.reloadData()
+     self?.completeRefresh()
+   }
+ }
+ 
+ */
 
 class TransactionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   @IBOutlet weak var transactionTableView: UITableView!
   @IBOutlet weak var environmentSegment: UISegmentedControl!
   let refreshControl = UIRefreshControl()
+  var transactions = [AWSTransaction]()
   private var awsEnvironment = AWSEnvironment.development
-  private var cognitoId = "us-east-1:b244ca7b-9f4f-45fd-b3d1-fda5bbaaa36d"
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     setUpSegmentView()
     setUpTableView()
-    
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    simulateTablePull()
+    manualRefresh()
   }
   
   private func setUpSegmentView() {
+    environmentSegment.isHidden = true
+    
     environmentSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black],
                                               for: .selected)
     environmentSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black],
@@ -46,24 +65,46 @@ class TransactionViewController: UIViewController, UITableViewDataSource, UITabl
     transactionTableView.refreshControl = refreshControl
     transactionTableView.refreshControl?.tintColor = .darkGray
     transactionTableView.refreshControl?.addTarget(self,
-                                                   action: #selector(didPullToRefresh),
+                                                   action: #selector(getTransactionData),
                                                    for: .valueChanged)
   }
   
-  private func getTransactionData() {
-    AWSTransactionManager.getTransactionData()
-    didPullToRefresh()
-  }
-  
   @objc
-  private func didPullToRefresh() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-      self.transactionTableView.refreshControl?.endRefreshing()
+  private func getTransactionData() {
+    AWSTransactionManager.getTransactionData(fromEnvironment: .laboratory) { [weak self] (awsTransactions, error) in
+      guard let awsTransactions = awsTransactions else {
+        if let error = error {
+          print("ERROR IN CONNECTING WITH DB: \(error.userInfo)")
+          
+          DispatchQueue.main.async {
+            self?.handleError()
+          }
+        }
+        return
+      }
+      
+      DispatchQueue.main.async {
+        self?.transactions = awsTransactions
+        self?.transactionTableView.reloadData()
+        self?.completeRefresh()
+      }
     }
   }
   
+  private func completeRefresh() {
+    self.transactionTableView.refreshControl?.endRefreshing()
+  }
+  
+  private func handleError() {
+    completeRefresh()
+    let alert = UIAlertController(title: "Error", message: "There was an error in connecting to DynamoDB, please try again later", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    present(alert, animated: true, completion: nil)
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    print("\(transactions.count) Transactions to load")
+    return transactions.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,18 +115,16 @@ class TransactionViewController: UIViewController, UITableViewDataSource, UITabl
   @IBAction func segmentChangedAction(_ sender: UISegmentedControl) {
     if sender.selectedSegmentIndex == 0 {
       awsEnvironment = .development
-      cognitoId = "us-east-1:b244ca7b-9f4f-45fd-b3d1-fda5bbaaa36d"
     }
     else {
       awsEnvironment = .laboratory
-      cognitoId = "us-east-1:602956b1-c5e3-41b3-9bdf-a87bce26feb6"
     }
 
-    simulateTablePull()
+    manualRefresh()
   }
   
-  private func simulateTablePull() {
-    DispatchQueue.main.asyncAfter(deadline: .now()) {
+  private func manualRefresh() {
+    DispatchQueue.main.async {
       self.transactionTableView.setContentOffset(CGPoint(x: 0,
                                                          y: self.transactionTableView.contentOffset.y - (self.refreshControl.frame.size.height)),
                                                          animated: true)
