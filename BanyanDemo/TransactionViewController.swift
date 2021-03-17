@@ -43,6 +43,7 @@ class TransactionViewController: UIViewController, UITableViewDataSource, UITabl
     super.viewWillAppear(animated)
     setUpSegmentView()
     setUpTableView()
+    title = "Transactions"
   }
   
   override func viewDidAppear(_ animated: Bool) {
