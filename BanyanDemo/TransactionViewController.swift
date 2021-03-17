@@ -109,6 +109,7 @@ class TransactionViewController: UIViewController, UITableViewDataSource, UITabl
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier) as! TransactionTableViewCell
+    cell.initializeCell(withTransaction: transactions[indexPath.row])
     return cell
   }
   
