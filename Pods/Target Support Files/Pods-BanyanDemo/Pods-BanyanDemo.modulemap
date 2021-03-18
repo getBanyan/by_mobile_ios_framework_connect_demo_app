@@ -1,0 +1,6 @@
+framework module Pods_BanyanDemo {
+  umbrella header "Pods-BanyanDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

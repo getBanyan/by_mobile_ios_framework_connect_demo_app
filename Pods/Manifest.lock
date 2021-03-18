@@ -1,0 +1,38 @@
+PODS:
+  - AWSCore (2.23.0)
+  - AWSDynamoDB (2.23.0):
+    - AWSCore (= 2.23.0)
+  - AWSLambda (2.23.0):
+    - AWSCore (= 2.23.0)
+  - CardScan (2.0.7)
+  - VGSCollectSDK (1.7.5):
+    - VGSCollectSDK/Core (= 1.7.5)
+  - VGSCollectSDK/CardScan (1.7.5):
+    - CardScan (= 2.0.7)
+    - VGSCollectSDK/Core
+  - VGSCollectSDK/Core (1.7.5)
+
+DEPENDENCIES:
+  - AWSDynamoDB
+  - AWSLambda (= 2.23.0)
+  - VGSCollectSDK (= 1.7.5)
+  - VGSCollectSDK/CardScan (= 1.7.5)
+
+SPEC REPOS:
+  trunk:
+    - AWSCore
+    - AWSDynamoDB
+    - AWSLambda
+    - CardScan
+    - VGSCollectSDK
+
+SPEC CHECKSUMS:
+  AWSCore: 589ad0bd5b72e9a95ce33834f12339b50cfc9f14
+  AWSDynamoDB: f1478da551037b6997e6f81aa3e188786e5fb8d5
+  AWSLambda: 52834cc7405578209b24ed848928b254b5b46b33
+  CardScan: 0bc2843073a9c2ef954fbb59a671d306efd76c4c
+  VGSCollectSDK: 4c76e4e0729060101cf40ab27bde8bd3db7d36c9
+
+PODFILE CHECKSUM: d7feecb96efecf2a26677bd3e6a3ebe68440cd81
+
+COCOAPODS: 1.10.1
