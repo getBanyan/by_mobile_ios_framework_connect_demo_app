@@ -13,7 +13,7 @@ import BYServiceSDK
 class DashboardViewController: UIViewController, SettingsDelegate {
   
   var byController: BYController?
-  var currentEnvironment: BYEnvironment = .Development
+  var currentEnvironment: BYEnvironment = .Laboratory
   
   @IBOutlet weak var userIdLabel: UILabel!
   @IBOutlet weak var userIdTextField: UITextField!
@@ -76,8 +76,8 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   }
   
   func setUpNavBar() {
-    navigationItem.hidesBackButton = true
-    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+    //navigationItem.hidesBackButton = true
+    //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
   }
   
   @objc

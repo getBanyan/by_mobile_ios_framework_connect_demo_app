@@ -8,29 +8,6 @@
 import UIKit
 import AWSCore
 
-/*
- 
- { [weak self] (awsTransaction, error) in
-   guard let awsTransaction = awsTransaction else {
-     if let error = error {
-       print("ERROR IN CONNECTING WITH DB: \(error.userInfo)")
-       
-       DispatchQueue.main.async {
-         self?.handleError()
-       }
-     }
-     return
-   }
-   
-   DispatchQueue.main.async {
-     self?.transactions = awsTransaction
-     self?.transactionTableView.reloadData()
-     self?.completeRefresh()
-   }
- }
- 
- */
-
 class TransactionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   @IBOutlet weak var transactionTableView: UITableView!
