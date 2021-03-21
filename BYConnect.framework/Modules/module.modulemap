@@ -1,0 +1,11 @@
+framework module BYConnect {
+  umbrella header "BYConnect.h"
+
+  export *
+  module * { export * }
+}
+
+module BYConnect.Swift {
+    header "BYConnect-Swift.h"
+    requires objc
+}

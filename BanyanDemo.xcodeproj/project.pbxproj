@@ -11,14 +11,14 @@
 		2B02FD8125FA4F6B00B78B01 /* UITextField+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */; };
 		2B0B51162600F7F000E168D1 /* AWSTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B51152600F7F000E168D1 /* AWSTransaction.swift */; };
 		2B6910D225FBB78700218D7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6910D125FBB78700218D7D /* SettingsViewController.swift */; };
+		2B74A8A82607C9D20083D633 /* BYConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B74A8A62607C9CD0083D633 /* BYConnect.framework */; };
+		2B74A8A92607C9D20083D633 /* BYConnect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B74A8A62607C9CD0083D633 /* BYConnect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BA002A025DBAF44000F4968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0029F25DBAF44000F4968 /* AppDelegate.swift */; };
 		2BA002A725DBAF44000F4968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002A525DBAF44000F4968 /* Main.storyboard */; };
 		2BA002A925DBAF50000F4968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002A825DBAF50000F4968 /* Assets.xcassets */; };
 		2BA002AC25DBAF50000F4968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */; };
 		2BA002B725DBB12F000F4968 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002B625DBB12F000F4968 /* DashboardViewController.swift */; };
 		2BA002BC25DBC6C5000F4968 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */; };
-		2BB27B522602513A0088C95D /* BYServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB27B50260251310088C95D /* BYServiceSDK.framework */; };
-		2BB27B532602513A0088C95D /* BYServiceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB27B50260251310088C95D /* BYServiceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BD17AC92600AD88000FDC00 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17AC82600AD88000FDC00 /* MenuViewController.swift */; };
 		2BD17ACB2600ADA4000FDC00 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */; };
 		2BD17ACD2600B201000FDC00 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */; };
@@ -31,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2BB27B532602513A0088C95D /* BYServiceSDK.framework in Embed Frameworks */,
+				2B74A8A92607C9D20083D633 /* BYConnect.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +42,7 @@
 		2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneButton.swift"; sourceTree = "<group>"; };
 		2B0B51152600F7F000E168D1 /* AWSTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSTransaction.swift; sourceTree = "<group>"; };
 		2B6910D125FBB78700218D7D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2B74A8A62607C9CD0083D633 /* BYConnect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYConnect.framework; sourceTree = SOURCE_ROOT; };
 		2BA0029C25DBAF44000F4968 /* BanyanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BanyanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA0029F25DBAF44000F4968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA002A625DBAF44000F4968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		2BA002AD25DBAF50000F4968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA002B625DBB12F000F4968 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2BB27B50260251310088C95D /* BYServiceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYServiceSDK.framework; sourceTree = SOURCE_ROOT; };
 		2BD17AC82600AD88000FDC00 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB27B522602513A0088C95D /* BYServiceSDK.framework in Frameworks */,
+				2B74A8A82607C9D20083D633 /* BYConnect.framework in Frameworks */,
 				198B69D13761CF9761D56137 /* Pods_BanyanDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +93,7 @@
 		2BA0029E25DBAF44000F4968 /* BanyanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2BB27B50260251310088C95D /* BYServiceSDK.framework */,
+				2B74A8A62607C9CD0083D633 /* BYConnect.framework */,
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,

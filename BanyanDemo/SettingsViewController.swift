@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import BYServiceSDK
+import BYConnect
 
 protocol SettingsDelegate: class {
   func changeEnvironment(_ environment: BYEnvironment) // add any necessary parameters

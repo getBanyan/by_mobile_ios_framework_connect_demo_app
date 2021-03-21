@@ -6,13 +6,13 @@
 //
 
 import UIKit
-import BYServiceSDK
+import BYConnect
 
 
 
 class DashboardViewController: UIViewController, SettingsDelegate {
   
-  var byController: BYController?
+  var byConnectController: BYConnectController?
   var currentEnvironment: BYEnvironment = .Laboratory
   
   @IBOutlet weak var userIdLabel: UILabel!
@@ -40,7 +40,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    byController = nil
+    byConnectController = nil
     textInputColors = [lightGreen, lightPink, lightBlue]
     customizationView.isHidden = customAnimationSwitch.isOn
     customizeSegment()
@@ -96,15 +96,15 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   @IBAction func tapToConnectButtonTapped() {
     let userId = getUserId()
     
-    byController = BYController(withClientId: userId, andEnvironment: .Laboratory)
-    byController?.shouldShowLogs = true
-    byController?.allowsCustomUI = !customAnimationSwitch.isOn
-    byController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
-    byController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
-    byController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
-    byController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
-    byController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputBackgroundColor)
-    byController?.present(on: self, animated: true, completion: nil)
+    byConnectController = BYConnectController(withClientId: userId, andEnvironment: .Laboratory)
+    byConnectController?.shouldShowLogs = true
+    byConnectController?.allowsCustomUI = !customAnimationSwitch.isOn
+    byConnectController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
+    byConnectController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
+    byConnectController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
+    byConnectController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
+    byConnectController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputBackgroundColor)
+    byConnectController?.present(on: self, animated: true, completion: nil)
   }
   
   @IBAction func switchChanged(_ sender: UISwitch, forEvent event: UIEvent) {
