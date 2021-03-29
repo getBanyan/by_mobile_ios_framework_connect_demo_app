@@ -8,15 +8,13 @@
 import UIKit
 import BYConnect
 
-
-
 class DashboardViewController: UIViewController, SettingsDelegate {
   
   var byConnectController: BYConnectController?
   var currentEnvironment: BYEnvironment = .Laboratory
   
-  @IBOutlet weak var userIdLabel: UILabel!
   @IBOutlet weak var userIdTextField: UITextField!
+  @IBOutlet weak var apiKeyTextField: UITextField!
   
   @IBOutlet weak var customizationView: UIView!
   @IBOutlet weak var viewBgColorSegment: UISegmentedControl!
@@ -27,6 +25,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   @IBOutlet weak var customAnimationSwitch: UISwitch!
   
   var randomId = ""
+  var randomAPIKey = ""
   
   let lightGreen = UIColor(red: 4.0/255.0, green: 114.0/255.0, blue: 77.0/255.0, alpha: 1.0)
   let lightPink = UIColor(red: 245.0/255.0, green: 237.0/255.0, blue: 240.0/255.0, alpha: 1.0)
@@ -44,7 +43,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     textInputColors = [lightGreen, lightPink, lightBlue]
     customizationView.isHidden = customAnimationSwitch.isOn
     customizeSegment()
-    setUpTextField()
+    setUpTextFields()
     setUpNavBar()
   }
   
@@ -57,21 +56,33 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     }
   }
   
-  func setUpTextField() {
+  func setUpTextFields() {
     userIdTextField.layer.borderWidth = 1.0
     userIdTextField.layer.borderColor = UIColor.black.cgColor
     userIdTextField.doneAccessory = true
+    userIdTextField.attributedPlaceholder = NSAttributedString(string: "Enter a user id or leave blank for a random id",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    
+    apiKeyTextField.layer.borderWidth = 1.0
+    apiKeyTextField.layer.borderColor = UIColor.black.cgColor
+    apiKeyTextField.doneAccessory = true
+    apiKeyTextField.attributedPlaceholder = NSAttributedString(string: "Enter an api key or leave blank for a random key",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     
     if let exitingUserId = UserDefaults.standard.string(forKey: "userId") {
       randomId = exitingUserId
     }
     else {
       randomId = randomString(ofLength: 10)
+      UserDefaults.standard.setValue(randomId, forKey: "userId")
     }
     
-    UserDefaults.standard.setValue(randomId, forKey: "userId")
-    if let text = userIdLabel.text {
-      userIdLabel.text = text + randomId
+    if let apiKey = UserDefaults.standard.string(forKey: "apiKey") {
+      randomAPIKey = apiKey
+    }
+    else {
+      randomAPIKey = randomString(ofLength: 8)
+      UserDefaults.standard.setValue(randomAPIKey, forKey: "apiKey")
     }
   }
   
@@ -95,8 +106,9 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   
   @IBAction func tapToConnectButtonTapped() {
     let userId = getUserId()
+    let apiKey = getAPIKey()
     
-    byConnectController = BYConnectController(withClientId: userId, andEnvironment: .Laboratory)
+    byConnectController = BYConnectController(withClientId: userId, apiKey: apiKey, andEnvironment: .Laboratory)
     byConnectController?.shouldShowLogs = true
     byConnectController?.allowsCustomUI = !customAnimationSwitch.isOn
     byConnectController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
@@ -121,6 +133,18 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     }
     
     return "Shawn-Frank"
+  }
+  
+  func getAPIKey() -> String {
+    if let apiKey = apiKeyTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+       apiKey.count > 0 {
+      return apiKey
+    }
+    else if let existingAPIKey = UserDefaults.standard.string(forKey: "apiKey") {
+      return existingAPIKey
+    }
+    
+    return "1234567"
   }
   
   func randomString(ofLength length: Int) -> String {

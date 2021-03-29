@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BYConnect-Swift.h</key>
 		<data>
-		IwyJlqbqFTnAZHRf249yDilgOj0=
+		2UfLNVinz88VF7noffqxaabbg2o=
 		</data>
 		<key>Headers/BYConnect.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GGGnf5fBsBgfPbwJWOP/wI6WhUk=
+		afh8qLTXKNKBwtqsoSQrR8cWhoo=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		pe2ifRRK9gMuCWoyWjZyRSCn2pA=
+		iJ8F9/Y3T8+99VFQJQLcuzhy91w=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		pe2ifRRK9gMuCWoyWjZyRSCn2pA=
+		iJ8F9/Y3T8+99VFQJQLcuzhy91w=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		SdKbCBe4XvWp1qw9f2Sv/t7MSk4=
+		zHthbiD0aIHZYuKS4OTD8bHBxs0=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NyiHT6whbir5dlk9RVB+Zduo2J0=
+		hoB/vQXavL/aPNgv4OcVfvB1RqE=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		SdKbCBe4XvWp1qw9f2Sv/t7MSk4=
+		zHthbiD0aIHZYuKS4OTD8bHBxs0=
 		</data>
 		<key>Modules/BYConnect.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		NyiHT6whbir5dlk9RVB+Zduo2J0=
+		hoB/vQXavL/aPNgv4OcVfvB1RqE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IHHdm77UZc0o5QloYXtMZIPoXz5Sz9HevMyONhHdlwQ=
+			62dDuGJ/8XXHS6Y3r49u360PsSSww5TPx6CyMOhstJ0=
 			</data>
 		</dict>
 		<key>Headers/BYConnect.h</key>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oh2CqcwY7FITcwdcdxPdI/tidO2VKE8enGFjHANF+r0=
+			PkQU4iPsdJgyv3PM7Vs8ecugNLyI6kjH+pDk2YH8wkU=
 			</data>
 		</dict>
 		<key>Modules/BYConnect.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oh2CqcwY7FITcwdcdxPdI/tidO2VKE8enGFjHANF+r0=
+			PkQU4iPsdJgyv3PM7Vs8ecugNLyI6kjH+pDk2YH8wkU=
 			</data>
 		</dict>
 		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			48PLLJ9v1kzeEAYJof3lnQSxQQyNGohlS6QbmCnza4M=
+			nPz6jORkZoh1Vtc+i7URHCZzfASNEkH8lbiMQE+7gAU=
 			</data>
 		</dict>
 		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ERG0K2LN1s6VnrKPmcFAkXL4gZ8DJCbKVQkiUKAw9c=
+			PmpvvetGCHuwlcxnoDAmMaXuiLuOhXzxbWAdMQX1iEc=
 			</data>
 		</dict>
 		<key>Modules/BYConnect.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			48PLLJ9v1kzeEAYJof3lnQSxQQyNGohlS6QbmCnza4M=
+			nPz6jORkZoh1Vtc+i7URHCZzfASNEkH8lbiMQE+7gAU=
 			</data>
 		</dict>
 		<key>Modules/BYConnect.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ERG0K2LN1s6VnrKPmcFAkXL4gZ8DJCbKVQkiUKAw9c=
+			PmpvvetGCHuwlcxnoDAmMaXuiLuOhXzxbWAdMQX1iEc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

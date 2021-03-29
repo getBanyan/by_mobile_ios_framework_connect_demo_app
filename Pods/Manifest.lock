@@ -1,9 +1,9 @@
 PODS:
-  - AWSCore (2.23.0)
-  - AWSDynamoDB (2.23.0):
-    - AWSCore (= 2.23.0)
-  - AWSLambda (2.23.0):
-    - AWSCore (= 2.23.0)
+  - AWSCore (2.23.2)
+  - AWSDynamoDB (2.23.2):
+    - AWSCore (= 2.23.2)
+  - AWSLambda (2.23.2):
+    - AWSCore (= 2.23.2)
   - CardScan (2.0.7)
   - VGSCollectSDK (1.7.5):
     - VGSCollectSDK/Core (= 1.7.5)
@@ -14,7 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - AWSDynamoDB
-  - AWSLambda (= 2.23.0)
+  - AWSLambda (= 2.23.2)
   - VGSCollectSDK (= 1.7.5)
   - VGSCollectSDK/CardScan (= 1.7.5)
 
@@ -27,12 +27,12 @@ SPEC REPOS:
     - VGSCollectSDK
 
 SPEC CHECKSUMS:
-  AWSCore: 589ad0bd5b72e9a95ce33834f12339b50cfc9f14
-  AWSDynamoDB: f1478da551037b6997e6f81aa3e188786e5fb8d5
-  AWSLambda: 52834cc7405578209b24ed848928b254b5b46b33
+  AWSCore: 70f79e95ee30f8eefa7122391d76ace516778f22
+  AWSDynamoDB: 238cc6711552a609c66ac93cf8d16d2cf84865f5
+  AWSLambda: 60713de9d4d3416f80d0b9dd3cc4942c5c313029
   CardScan: 0bc2843073a9c2ef954fbb59a671d306efd76c4c
   VGSCollectSDK: 4c76e4e0729060101cf40ab27bde8bd3db7d36c9
 
-PODFILE CHECKSUM: d7feecb96efecf2a26677bd3e6a3ebe68440cd81
+PODFILE CHECKSUM: 5c7f76cfbcb94a8d45e63427581f441762361d56
 
 COCOAPODS: 1.10.1
