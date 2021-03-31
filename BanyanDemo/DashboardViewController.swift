@@ -16,6 +16,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   @IBOutlet weak var userIdTextField: UITextField!
   @IBOutlet weak var apiKeyTextField: UITextField!
   
+  @IBOutlet weak var currentEnvironmentLabel: UILabel!
   @IBOutlet weak var customizationView: UIView!
   @IBOutlet weak var viewBgColorSegment: UISegmentedControl!
   @IBOutlet weak var buttonColorSegment: UISegmentedControl!
@@ -39,6 +40,17 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
+    if let environmentString = UserDefaults.standard.string(forKey: "environment"),
+       let environment = BYEnvironment(rawValue: environmentString) {
+      currentEnvironment = environment
+    }
+    else {
+      UserDefaults.standard.setValue(currentEnvironment.rawValue, forKey: "environment")
+    }
+    
+    currentEnvironmentLabel.text = "Current Environment: \(currentEnvironment.rawValue)"
+    
     byConnectController = nil
     textInputColors = [lightGreen, lightPink, lightBlue]
     customizationView.isHidden = customAnimationSwitch.isOn
@@ -87,14 +99,16 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   }
   
   func setUpNavBar() {
-    //navigationItem.hidesBackButton = true
-    //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+    navigationItem.rightBarButtonItem?.tintColor = .black
   }
   
   @objc
   private func settingsButtonTapped() {
     if let svc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "settingsVC") as? SettingsViewController {
       svc.currentEnvironment = currentEnvironment
+      svc.newEnvironment = currentEnvironment
       svc.settingsDelegate = self
       present(svc, animated: true, completion: nil)
     }
@@ -108,7 +122,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     let userId = getUserId()
     let apiKey = getAPIKey()
     
-    byConnectController = BYConnectController(withClientId: userId, apiKey: apiKey, andEnvironment: .Laboratory)
+    byConnectController = BYConnectController(withClientId: userId, apiKey: apiKey, andEnvironment: currentEnvironment)
     byConnectController?.shouldShowLogs = true
     byConnectController?.allowsCustomUI = !customAnimationSwitch.isOn
     byConnectController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)

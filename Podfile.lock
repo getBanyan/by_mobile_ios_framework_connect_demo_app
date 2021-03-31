@@ -4,6 +4,10 @@ PODS:
     - AWSCore (= 2.23.2)
   - AWSLambda (2.23.2):
     - AWSCore (= 2.23.2)
+  - BYConnect (0.21.1):
+    - AWSLambda (= 2.23.2)
+    - VGSCollectSDK (= 1.7.5)
+    - VGSCollectSDK/CardScan (= 1.7.5)
   - CardScan (2.0.7)
   - VGSCollectSDK (1.7.5):
     - VGSCollectSDK/Core (= 1.7.5)
@@ -14,15 +18,14 @@ PODS:
 
 DEPENDENCIES:
   - AWSDynamoDB
-  - AWSLambda (= 2.23.2)
-  - VGSCollectSDK (= 1.7.5)
-  - VGSCollectSDK/CardScan (= 1.7.5)
+  - BYConnect
 
 SPEC REPOS:
   trunk:
     - AWSCore
     - AWSDynamoDB
     - AWSLambda
+    - BYConnect
     - CardScan
     - VGSCollectSDK
 
@@ -30,9 +33,10 @@ SPEC CHECKSUMS:
   AWSCore: 70f79e95ee30f8eefa7122391d76ace516778f22
   AWSDynamoDB: 238cc6711552a609c66ac93cf8d16d2cf84865f5
   AWSLambda: 60713de9d4d3416f80d0b9dd3cc4942c5c313029
+  BYConnect: 82c16868a80ac4febb0ecc800e5533bc8ca2cc11
   CardScan: 0bc2843073a9c2ef954fbb59a671d306efd76c4c
   VGSCollectSDK: 4c76e4e0729060101cf40ab27bde8bd3db7d36c9
 
-PODFILE CHECKSUM: 5c7f76cfbcb94a8d45e63427581f441762361d56
+PODFILE CHECKSUM: 7911847f949a605e0dd668b3a74c7723b113df72
 
 COCOAPODS: 1.10.1

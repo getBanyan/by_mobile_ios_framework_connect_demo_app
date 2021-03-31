@@ -14,8 +14,12 @@ protocol SettingsDelegate: class {
 
 class SettingsViewController: UIViewController {
   
+  var currentEnvironment: BYEnvironment!
+  var newEnvironment: BYEnvironment!
+  var alertView = UIAlertController()
+  var warningTimerCurrent = 5
+  
   @IBOutlet weak var environmentSegment: UISegmentedControl!
-  var currentEnvironment: BYEnvironment = .Development
   weak var settingsDelegate: SettingsDelegate?
   
   override func viewWillAppear(_ animated: Bool) {
@@ -37,16 +41,45 @@ class SettingsViewController: UIViewController {
   }
   
   @IBAction func doneButtonTapped(_ sender: Any) {
-    settingsDelegate?.changeEnvironment(currentEnvironment)
-    dismiss(animated: true, completion: nil)
+    if currentEnvironment == newEnvironment {
+      dismiss(animated: true, completion: nil)
+    }
+    else {
+      UserDefaults.standard.setValue(newEnvironment.rawValue, forKey: "environment")
+      showRestartPopup()
+    }
   }
   
   @IBAction func segmentSet(_ sender: UISegmentedControl) {
     if sender.selectedSegmentIndex == 0 {
-      currentEnvironment = .Development
+      newEnvironment = .Development
     }
     else {
-      currentEnvironment = .Laboratory
+      newEnvironment = .Laboratory
+    }
+  }
+  
+  func showRestartPopup() {
+    Timer.scheduledTimer(timeInterval: 1, target:self ,
+                                     selector: #selector(warningCheck),
+                                     userInfo: nil,
+                                     repeats: true)
+    
+    alertView = UIAlertController(title: "App Quitting in \(warningTimerCurrent)",
+                                  message: "AWS Cognito credentials needs to be reset for you to access that module.\nThe app needs to quit completely and restart.",
+                                  preferredStyle: .alert)
+    
+    present(alertView, animated: true, completion: nil)
+  }
+  
+  @objc
+  func warningCheck() {
+    if warningTimerCurrent != 0 {
+      warningTimerCurrent -= 1
+      alertView.title = "App Quitting in \(warningTimerCurrent)"
+    }
+    else {
+      fatalError()
     }
   }
   
