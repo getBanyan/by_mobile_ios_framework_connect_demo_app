@@ -4,110 +4,110 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/BYServiceSDK-Swift.h</key>
+		<key>Headers/BYConnect-Swift.h</key>
 		<data>
-		Y2eMROdtULfk3T/WEwjoN1jdtEM=
+		2UfLNVinz88VF7noffqxaabbg2o=
 		</data>
-		<key>Headers/BYServiceSDK.h</key>
+		<key>Headers/BYConnect.h</key>
 		<data>
-		OV/zXehqH/QCNC8whIqFDVDD6e0=
+		5Y26IP5lgGIDdDYbgcPF423ewqI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9CWSg/RZWh7f2oWRypwoyXaHGG8=
+		Yqn4yzaVtMR418qTfHysZNwltjE=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<key>Modules/BYConnect.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		URm3ECjhF7nkST/1Z/+/M38sUd8=
+		iJ8F9/Y3T8+99VFQJQLcuzhy91w=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<key>Modules/BYConnect.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		URm3ECjhF7nkST/1Z/+/M38sUd8=
+		iJ8F9/Y3T8+99VFQJQLcuzhy91w=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		YhYYhaebj+EtleNCBCOh/4+AcpY=
+		zHthbiD0aIHZYuKS4OTD8bHBxs0=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		uDstu9aLxjcTu/k7oA1t9yMRIMA=
+		hoB/vQXavL/aPNgv4OcVfvB1RqE=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/BYConnect.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		YhYYhaebj+EtleNCBCOh/4+AcpY=
+		zHthbiD0aIHZYuKS4OTD8bHBxs0=
 		</data>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftmodule</key>
+		<key>Modules/BYConnect.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		uDstu9aLxjcTu/k7oA1t9yMRIMA=
+		hoB/vQXavL/aPNgv4OcVfvB1RqE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		SLN3uuauaOhZ4c8tfqUoRc0k7Ko=
+		AqokAoRaC7kK/bXhXvE0Fnw9UNs=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/BYServiceSDK-Swift.h</key>
+		<key>Headers/BYConnect-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w+D4o/MXAY3TiiWdzTAI15Cw0niMBe9DUb8MSZN9zMM=
+			62dDuGJ/8XXHS6Y3r49u360PsSSww5TPx6CyMOhstJ0=
 			</data>
 		</dict>
-		<key>Headers/BYServiceSDK.h</key>
+		<key>Headers/BYConnect.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/mbCr4tmsBroc6RLls+Imwl8BX0n6w1HOdl7c6AHq9k=
+			w5zRvBzYz3EZFnsQBpB+NueseiXePz2Le6LDhMOSGB8=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<key>Modules/BYConnect.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			poBaZi9OC6JCOvFAUNAJq3ysfjUUDBRM/158z9XLGgk=
+			PkQU4iPsdJgyv3PM7Vs8ecugNLyI6kjH+pDk2YH8wkU=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<key>Modules/BYConnect.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			poBaZi9OC6JCOvFAUNAJq3ysfjUUDBRM/158z9XLGgk=
+			PkQU4iPsdJgyv3PM7Vs8ecugNLyI6kjH+pDk2YH8wkU=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9GRTZPQTtnIsBRvjCpxAmAYQcck1Riyzd+eaCv6jmqQ=
+			nPz6jORkZoh1Vtc+i7URHCZzfASNEkH8lbiMQE+7gAU=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/BYConnect.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qSdykA3FF/OuauKydoGUPvjXjCUt1ZjdrkhieqokJNk=
+			PmpvvetGCHuwlcxnoDAmMaXuiLuOhXzxbWAdMQX1iEc=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/BYConnect.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9GRTZPQTtnIsBRvjCpxAmAYQcck1Riyzd+eaCv6jmqQ=
+			nPz6jORkZoh1Vtc+i7URHCZzfASNEkH8lbiMQE+7gAU=
 			</data>
 		</dict>
-		<key>Modules/BYServiceSDK.swiftmodule/arm64.swiftmodule</key>
+		<key>Modules/BYConnect.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qSdykA3FF/OuauKydoGUPvjXjCUt1ZjdrkhieqokJNk=
+			PmpvvetGCHuwlcxnoDAmMaXuiLuOhXzxbWAdMQX1iEc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lVG55ZDJUAbdrlba1pV24C6btfo15znvVbsrKSFwYZE=
+			2BruQViHwEPllTJMqXpKWhXxIoPWr+v1hCVrmlOUuu0=
 			</data>
 		</dict>
 	</dict>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		198B69D13761CF9761D56137 /* Pods_BanyanDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF61F5ED0B2B2D3BAA77214F /* Pods_BanyanDemo.framework */; };
 		2B02FD8125FA4F6B00B78B01 /* UITextField+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */; };
 		2B0B51162600F7F000E168D1 /* AWSTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B51152600F7F000E168D1 /* AWSTransaction.swift */; };
 		2B6910D225FBB78700218D7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6910D125FBB78700218D7D /* SettingsViewController.swift */; };
@@ -17,11 +16,10 @@
 		2BA002AC25DBAF50000F4968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA002AA25DBAF50000F4968 /* LaunchScreen.storyboard */; };
 		2BA002B725DBB12F000F4968 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002B625DBB12F000F4968 /* DashboardViewController.swift */; };
 		2BA002BC25DBC6C5000F4968 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */; };
-		2BB27B522602513A0088C95D /* BYServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB27B50260251310088C95D /* BYServiceSDK.framework */; };
-		2BB27B532602513A0088C95D /* BYServiceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB27B50260251310088C95D /* BYServiceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BD17AC92600AD88000FDC00 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17AC82600AD88000FDC00 /* MenuViewController.swift */; };
 		2BD17ACB2600ADA4000FDC00 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */; };
 		2BD17ACD2600B201000FDC00 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */; };
+		83ADDB403CCE1280B10D5694 /* Pods_BanyanDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8194B062A60E0336A5E06C2A /* Pods_BanyanDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2BB27B532602513A0088C95D /* BYServiceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		20B6996CFA011E156BFC0F2A /* Pods-BanyanDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.release.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2B02FD8025FA4F6B00B78B01 /* UITextField+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneButton.swift"; sourceTree = "<group>"; };
 		2B0B51152600F7F000E168D1 /* AWSTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSTransaction.swift; sourceTree = "<group>"; };
 		2B6910D125FBB78700218D7D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -50,13 +48,11 @@
 		2BA002AD25DBAF50000F4968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA002B625DBB12F000F4968 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2BB27B50260251310088C95D /* BYServiceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BYServiceSDK.framework; sourceTree = SOURCE_ROOT; };
 		2BD17AC82600AD88000FDC00 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2BD17ACA2600ADA4000FDC00 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		2BD17ACC2600B201000FDC00 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		2FF09606877F2B0CA69EA302 /* Pods-BanyanDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.debug.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		62E2E3A17D5CAB4481AC3446 /* Pods-BanyanDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.release.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.release.xcconfig"; sourceTree = "<group>"; };
-		DF61F5ED0B2B2D3BAA77214F /* Pods_BanyanDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanyanDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8194B062A60E0336A5E06C2A /* Pods_BanyanDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanyanDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9666402424C5FCA7C832F453 /* Pods-BanyanDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanyanDemo.debug.xcconfig"; path = "Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB27B522602513A0088C95D /* BYServiceSDK.framework in Frameworks */,
-				198B69D13761CF9761D56137 /* Pods_BanyanDemo.framework in Frameworks */,
+				83ADDB403CCE1280B10D5694 /* Pods_BanyanDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +73,7 @@
 				2BA0029E25DBAF44000F4968 /* BanyanDemo */,
 				2BA0029D25DBAF44000F4968 /* Products */,
 				9BB6B18508FEBF3D6B1CB121 /* Pods */,
-				DB76A2973667DABB4EB64656 /* Frameworks */,
+				53D1E7FAE7B76CEB25E2AFD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +88,6 @@
 		2BA0029E25DBAF44000F4968 /* BanyanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2BB27B50260251310088C95D /* BYServiceSDK.framework */,
 				2BA0029F25DBAF44000F4968 /* AppDelegate.swift */,
 				2BA002A525DBAF44000F4968 /* Main.storyboard */,
 				2BA002BB25DBC6C5000F4968 /* LoginViewController.swift */,
@@ -111,21 +105,21 @@
 			path = BanyanDemo;
 			sourceTree = "<group>";
 		};
+		53D1E7FAE7B76CEB25E2AFD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8194B062A60E0336A5E06C2A /* Pods_BanyanDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9BB6B18508FEBF3D6B1CB121 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2FF09606877F2B0CA69EA302 /* Pods-BanyanDemo.debug.xcconfig */,
-				62E2E3A17D5CAB4481AC3446 /* Pods-BanyanDemo.release.xcconfig */,
+				9666402424C5FCA7C832F453 /* Pods-BanyanDemo.debug.xcconfig */,
+				20B6996CFA011E156BFC0F2A /* Pods-BanyanDemo.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		DB76A2973667DABB4EB64656 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DF61F5ED0B2B2D3BAA77214F /* Pods_BanyanDemo.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,12 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BA002B025DBAF50000F4968 /* Build configuration list for PBXNativeTarget "BanyanDemo" */;
 			buildPhases = (
-				8B485EFF8D2F64D5C7C08E21 /* [CP] Check Pods Manifest.lock */,
+				3C888724BBD847907A40FBD1 /* [CP] Check Pods Manifest.lock */,
 				2BA0029825DBAF44000F4968 /* Sources */,
 				2BA0029925DBAF44000F4968 /* Frameworks */,
 				2BA0029A25DBAF44000F4968 /* Resources */,
 				2B1B26CC25F66AC30041D98C /* Embed Frameworks */,
-				63635CB6FA4DACF316806437 /* [CP] Embed Pods Frameworks */,
+				A3C92AE5F2AD8A6BB4F39673 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,24 +191,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		63635CB6FA4DACF316806437 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B485EFF8D2F64D5C7C08E21 /* [CP] Check Pods Manifest.lock */ = {
+		3C888724BBD847907A40FBD1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C92AE5F2AD8A6BB4F39673 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BanyanDemo/Pods-BanyanDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -395,13 +389,13 @@
 		};
 		2BA002B125DBAF50000F4968 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FF09606877F2B0CA69EA302 /* Pods-BanyanDemo.debug.xcconfig */;
+			baseConfigurationReference = 9666402424C5FCA7C832F453 /* Pods-BanyanDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -414,24 +408,25 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.0;
+				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
 		2BA002B225DBAF50000F4968 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62E2E3A17D5CAB4481AC3446 /* Pods-BanyanDemo.release.xcconfig */;
+			baseConfigurationReference = 20B6996CFA011E156BFC0F2A /* Pods-BanyanDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TK7283VKC2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -444,12 +439,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.0;
+				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.getbanyan.banyanservicetest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};

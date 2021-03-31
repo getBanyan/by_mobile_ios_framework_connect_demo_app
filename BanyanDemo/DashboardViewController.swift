@@ -6,18 +6,17 @@
 //
 
 import UIKit
-import BYServiceSDK
-
-
+import BYConnect
 
 class DashboardViewController: UIViewController, SettingsDelegate {
   
-  var byController: BYController?
+  var byConnectController: BYConnectController?
   var currentEnvironment: BYEnvironment = .Laboratory
   
-  @IBOutlet weak var userIdLabel: UILabel!
   @IBOutlet weak var userIdTextField: UITextField!
+  @IBOutlet weak var apiKeyTextField: UITextField!
   
+  @IBOutlet weak var currentEnvironmentLabel: UILabel!
   @IBOutlet weak var customizationView: UIView!
   @IBOutlet weak var viewBgColorSegment: UISegmentedControl!
   @IBOutlet weak var buttonColorSegment: UISegmentedControl!
@@ -27,6 +26,7 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   @IBOutlet weak var customAnimationSwitch: UISwitch!
   
   var randomId = ""
+  var randomAPIKey = ""
   
   let lightGreen = UIColor(red: 4.0/255.0, green: 114.0/255.0, blue: 77.0/255.0, alpha: 1.0)
   let lightPink = UIColor(red: 245.0/255.0, green: 237.0/255.0, blue: 240.0/255.0, alpha: 1.0)
@@ -40,11 +40,22 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    byController = nil
+    
+    if let environmentString = UserDefaults.standard.string(forKey: "environment"),
+       let environment = BYEnvironment(rawValue: environmentString) {
+      currentEnvironment = environment
+    }
+    else {
+      UserDefaults.standard.setValue(currentEnvironment.rawValue, forKey: "environment")
+    }
+    
+    currentEnvironmentLabel.text = "Current Environment: \(currentEnvironment.rawValue)"
+    
+    byConnectController = nil
     textInputColors = [lightGreen, lightPink, lightBlue]
     customizationView.isHidden = customAnimationSwitch.isOn
     customizeSegment()
-    setUpTextField()
+    setUpTextFields()
     setUpNavBar()
   }
   
@@ -57,33 +68,47 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     }
   }
   
-  func setUpTextField() {
+  func setUpTextFields() {
     userIdTextField.layer.borderWidth = 1.0
     userIdTextField.layer.borderColor = UIColor.black.cgColor
     userIdTextField.doneAccessory = true
+    userIdTextField.attributedPlaceholder = NSAttributedString(string: "Enter a user id or leave blank for a random id",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    
+    apiKeyTextField.layer.borderWidth = 1.0
+    apiKeyTextField.layer.borderColor = UIColor.black.cgColor
+    apiKeyTextField.doneAccessory = true
+    apiKeyTextField.attributedPlaceholder = NSAttributedString(string: "Enter an api key or leave blank for a random key",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     
     if let exitingUserId = UserDefaults.standard.string(forKey: "userId") {
       randomId = exitingUserId
     }
     else {
       randomId = randomString(ofLength: 10)
+      UserDefaults.standard.setValue(randomId, forKey: "userId")
     }
     
-    UserDefaults.standard.setValue(randomId, forKey: "userId")
-    if let text = userIdLabel.text {
-      userIdLabel.text = text + randomId
+    if let apiKey = UserDefaults.standard.string(forKey: "apiKey") {
+      randomAPIKey = apiKey
+    }
+    else {
+      randomAPIKey = randomString(ofLength: 8)
+      UserDefaults.standard.setValue(randomAPIKey, forKey: "apiKey")
     }
   }
   
   func setUpNavBar() {
-    //navigationItem.hidesBackButton = true
-    //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+    navigationItem.rightBarButtonItem?.tintColor = .black
   }
   
   @objc
   private func settingsButtonTapped() {
     if let svc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "settingsVC") as? SettingsViewController {
       svc.currentEnvironment = currentEnvironment
+      svc.newEnvironment = currentEnvironment
       svc.settingsDelegate = self
       present(svc, animated: true, completion: nil)
     }
@@ -95,16 +120,17 @@ class DashboardViewController: UIViewController, SettingsDelegate {
   
   @IBAction func tapToConnectButtonTapped() {
     let userId = getUserId()
+    let apiKey = getAPIKey()
     
-    byController = BYController(withClientId: userId, andEnvironment: .Laboratory)
-    byController?.shouldShowLogs = true
-    byController?.allowsCustomUI = !customAnimationSwitch.isOn
-    byController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
-    byController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
-    byController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
-    byController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
-    byController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputBackgroundColor)
-    byController?.present(on: self, animated: true, completion: nil)
+    byConnectController = BYConnectController(withClientId: userId, apiKey: apiKey, andEnvironment: currentEnvironment)
+    byConnectController?.shouldShowLogs = true
+    byConnectController?.allowsCustomUI = !customAnimationSwitch.isOn
+    byConnectController?.setLayoutColor(bgColors[viewBgColorSegment.selectedSegmentIndex], forKey: .viewBackgroundColor)
+    byConnectController?.setLayoutColor(buttonColors[buttonColorSegment.selectedSegmentIndex], forKey: .actionColor)
+    byConnectController?.setLayoutColor(textColors[textColorSegment.selectedSegmentIndex], forKey: .titleTextColor)
+    byConnectController?.setLayoutFontName(fontName[fontNameSegment.selectedSegmentIndex])
+    byConnectController?.setLayoutColor(textInputColors[textBoxColorSegment.selectedSegmentIndex], forKey: .inputBackgroundColor)
+    byConnectController?.present(on: self, animated: true, completion: nil)
   }
   
   @IBAction func switchChanged(_ sender: UISwitch, forEvent event: UIEvent) {
@@ -121,6 +147,18 @@ class DashboardViewController: UIViewController, SettingsDelegate {
     }
     
     return "Shawn-Frank"
+  }
+  
+  func getAPIKey() -> String {
+    if let apiKey = apiKeyTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+       apiKey.count > 0 {
+      return apiKey
+    }
+    else if let existingAPIKey = UserDefaults.standard.string(forKey: "apiKey") {
+      return existingAPIKey
+    }
+    
+    return "1234567"
   }
   
   func randomString(ofLength length: Int) -> String {

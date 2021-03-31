@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "loginVC")
     navController.setViewControllers([rootVC], animated: true)
+    navController.navigationBar.barTintColor = UIColor.black
+    navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     window?.rootViewController = navController
     window?.makeKeyAndVisible()
     
